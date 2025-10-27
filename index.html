@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous"/>
+
+  <!-- Font Awesome para ícones -->
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+
+  <style>
+    .minha-navbar {
+      background-color: #0080ff;
+      border-radius: 2px;
+      margin: 0px auto;
+      padding: 10px;
+    }
+
+    .minha-navbar .navbar-brand,
+    .minha-navbar .nav-link {
+      color: white;
+    }
+
+    .botao-busca-pequeno {
+      padding: 0.25rem 0.5rem;
+      font-size: 0.8rem;
+    }
+
+    .form-control.input-sm {
+      height: 30px;
+      font-size: 0.875rem;
+    }
+
+    .btn-sm {
+      height: 30px;
+      font-size: 0.875rem;
+      padding: 10px;
+    }
+
+    .meu-carrossel {
+      max-height: 800px;
+      overflow: hidden;
+      margin: 30px auto;
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .meu-carrossel img {
+      width: 100%;
+      height:100%;
+      margin: auto;
+      object-fit: cover;
+    }
+
+    .footer-fixo {
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      background-color: #212529;
+      color: white;
+      text-align: center;
+      padding: 3px ;
+      z-index: 999;
+    }
+
+    #cards-container {
+      margin-bottom: 120px;
+      padding: 20px;
+      padding-top: 40px;
+    }
+    body{
+      font-family:'Poppins', sans-serif;
+    }
+
+    .boas-vindas {
+      background: linear-gradient(135deg, #e0f2ff,#f9f9f9);
+      padding: 30px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .boas-vindas h2 {
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #005bb5;
+}
+.boas-vindas p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+ .boas-vindas .btn{
+  padding: 8px 20px;
+  font-size: 1rem;
+ }
+
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg minha-navbar sticky-top shadow">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">NOME DO SEU SITE</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" href="#">Home</a>
+          <a class="nav-link" href="#">Produtos</a>
+          <a class="nav-link" href="#">Preços</a>
+          <a class="nav-link" href="#">Sobre</a>
+          <a class="nav-link" href="#">Contato</a>
+        </div>
+          
+        <form class="d-flex ms-auto align-items-center" role="search">
+          <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar" />
+          <button class="btn btn-outline-light btn-sm" type="submit">Buscar</button>
+        </form>
+      </div>
+    </div>
+  </nav>,
+
+<!-- Container de boas-vindas -->
+<div class="container my-5">
+  <div class="boas-vindas">
+    <h2>Bem-vindo ao seu site!</h2>
+    <p>Aqui você encontra os melhores produtos, preços especiais e atendimento de qualidade.</p>
+    <a href="#cards-container" class="btn btn-primary btn-lg mt-4">Ver produtos</a>
+  </div>
+</div>
+
+<!-- Carrossel -->
+<div id="carouselExample" class="carousel slide meu-carrossel" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="imagens/imagem 1.jpg" class="d-block w-100" alt="Imagem 1" />
+    </div>
+    <div class="carousel-item">
+      <img src="imagens/imagem 2.jpg" class="d-block w-100" alt="Imagem 2" />
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Próximo</span>
+  </button>
+</div>
+
+
+<!-- Cards - Container dinâmico -->
+<div class="container my-5">
+  <div class="row" id="cards-container">
+    <!-- Os cards serão inseridos aqui via JavaScript -->
+  </div>
+</div>
+
+<!-- Container com ícones destacados -->
+<div class="container my-5">
+  <div class="row row-cols-1 row-cols-md-4 text-center g-4">
+    <div class="col">
+      <div class="icone-box">
+        <i class="fab fa-whatsapp fa-2x text-success mb-2"></i>
+        <div>WhatsApp</div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="icone-box">
+        <i class="fab fa-instagram fa-2x text-danger mb-2"></i>
+        <div>Instagram</div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="icone-box">
+        <i class="fas fa-credit-card fa-2x text-primary mb-2"></i>
+        <div>Parcelamento</div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="icone-box">
+        <i class="fas fa-truck fa-2x text-warning mb-2"></i>
+        <div>Frete Grátis</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Footer -->
+  <footer class="footer-fixo">
+    <p class="mb-0">© 2023 Seu Site. Todos os direitos reservados.</p>
+    <p class="mb-0">Desenvolvido por <a href="#" class="text-white">GuiiProgamador</a></p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+  <!-- Seu JavaScript externo -->
+  <script src="js/java.js"></script>
+</body>
+</html>
